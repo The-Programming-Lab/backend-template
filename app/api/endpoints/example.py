@@ -1,7 +1,7 @@
 from fastapi import APIRouter
-from app.api.config import hello_world
+from app.api.config import base_path, hello_world
 
-router = APIRouter(prefix="/user/braeden/api", tags=["example"])
+router = APIRouter(prefix=base_path, tags=["example"])
 
 
 @router.get("/example")
