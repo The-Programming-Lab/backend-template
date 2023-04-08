@@ -1,9 +1,9 @@
 from fastapi import APIRouter
-from app.api.config import base_path, hello_world
+from app.api.config import HELLO_WORLD
 
-router = APIRouter(prefix=base_path, tags=["example"])
+router = APIRouter(prefix='', tags=["example"])
 
 
 @router.get("/example")
 async def example():
-    return {"message": hello_world}
+    return {"message": HELLO_WORLD}
